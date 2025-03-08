@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+
+typedef struct 
+{
+    char nama[25];
+    int jarak;
+} DataOrang;
+
+DataOrang Listpeserta[100];
+
+int fileReader() {
+    FILE* file = fopen("no2.txt","r");
+    
+    char nama[25];
+    int jarak = 0;
+
+    while (!feof(file)) {
+        // fscanf(file,"%s %d",&nama,&jarak);
+        printf("%s %d\n");
+    }
+
+
+    fclose(file);
+}
+
+int main() {
+    
+
+
+
+}
