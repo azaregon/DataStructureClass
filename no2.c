@@ -35,6 +35,25 @@ int fileReader() {
     fclose(file);
 }
 
+
+
+DataOrang datDes[8];
+
+
+// int main() {
+
+//     for (int i = 0; i < 8; i++) {
+        
+
+//         for (int i = 0; i < tailListpeserta+1; i++) {
+            
+//         }
+//     }
+
+
+//     return  1;
+// }
+
 int main() {
 
     fileReader();
@@ -63,10 +82,6 @@ int main() {
     DataOrang best[10];
     char namaskrg[25];
 
-    for (int i = 0; i < tailListpeserta+1; i++) {
-        
-    }
-
     // for (int i = 0; i < 8; i++ ) {
     //     // for (int j = 0; j < tailListpeserta; j++)
     //     for (int j = 0; j < tailListpeserta+1; j++) {
@@ -75,22 +90,29 @@ int main() {
     //     printf("%s %d\n", Listpeserta[i].nama,Listpeserta[i].jarak);
     // }
 
-    // for (int i = 0; i < tailListpeserta+1; i++) {
-    //     if (strcmp(Listpeserta[i].nama,"no") == 0) {
-    //         continue;
-    //     } else {
-    //         // char namaskrg[25];
-    //         strcpy(namaskrg,Listpeserta[i].nama);
-    //     }
-    //     for (int j = i+1; j < tailListpeserta+1; j++) {
-    //         if (strcmp(Listpeserta[j].nama,namaskrg) == 0) {
-    //             strcpy(Listpeserta[j].nama,"no");
-    //         } else {
+    for (int i = 0; i < tailListpeserta+1; i++) {
+        if (strcmp(Listpeserta[i].nama,"no") == 0) {
+            continue;
+        } else {
+            // char namaskrg[25];
+            strcpy(namaskrg,Listpeserta[i].nama);
+        }
+        for (int j = i+1; j < tailListpeserta+1; j++) {
+            if (strcmp(Listpeserta[j].nama,namaskrg) == 0) {
+                strcpy(Listpeserta[j].nama,"no");
+            } else {
                 
-    //             printf("%s %d\n", Listpeserta[j].nama,Listpeserta[j].jarak);
-    //         }
-    //     }
-    // }
+                // printf("%s %d\n", Listpeserta[j].nama,Listpeserta[j].jarak);
+            }
+        }
+    }
+    
+    for (int i = 0; i < tailListpeserta+1; i++) {
+        if (strcmp(Listpeserta[i].nama,"no") != 0) {
+            printf("%s %d\n", Listpeserta[i].nama,Listpeserta[i].jarak);
+        }
+        
+    }
 
 
     
